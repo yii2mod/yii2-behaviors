@@ -1,6 +1,6 @@
 {
     "name": "yii2mod/yii2-behaviors",
-    "description": "Yii2 Enumerable helpers",
+    "description": "Yii2 behaviors",
     "type": "yii2-extension",
     "keywords": ["yii2", "extension"],
     "license": "MIT",
@@ -14,6 +14,10 @@
             "email": "igorzfort@gmail.com"
         }
     ],
+    "require": {
+        "yiisoft/yii2": ">=2.0.5",
+        "nesbot/carbon": "~1.0"
+    },
     "autoload": {
         "psr-4": {
             "yii2mod\\behaviors\\": ""
