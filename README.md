@@ -52,7 +52,6 @@ Usage
     public function behaviors()
     {
             return [
-                // your other behaviors
                 'carbon' => [
                     'class' => CarbonBehavior::className(),
                     'attributes' => [
