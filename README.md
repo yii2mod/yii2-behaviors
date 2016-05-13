@@ -1,6 +1,9 @@
 Yii2 behaviors
 ===============================================
 
+[![Latest Stable Version](https://poser.pugx.org/yii2mod/yii2-behaviors/v/stable)](https://packagist.org/packages/yii2mod/yii2-behaviors) [![Total Downloads](https://poser.pugx.org/yii2mod/yii2-behaviors/downloads)](https://packagist.org/packages/yii2mod/yii2-behaviors) [![License](https://poser.pugx.org/yii2mod/yii2-behaviors/license)](https://packagist.org/packages/yii2mod/yii2-behaviors)
+
+
 Installation
 ------------
 
