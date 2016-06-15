@@ -66,22 +66,23 @@ class CarbonBehavior extends Behavior
     public function events()
     {
         return [
-            ActiveRecord::EVENT_AFTER_FIND => 'afterFind',
-            ActiveRecord::EVENT_BEFORE_UPDATE => 'beforeUpdate',
+            ActiveRecord::EVENT_AFTER_FIND => 'attributesToCarbon',
+            ActiveRecord::EVENT_BEFORE_UPDATE => 'attributesToDefaultFormat',
+            ActiveRecord::EVENT_AFTER_UPDATE => 'attributesToCarbon',
         ];
     }
 
     /**
-     * Create Carbon instance for the each attribute
+     * Convert the model's attributes to an Carbon instance.
+     *
      * @param $event
      * @return static
      */
-    public function afterFind($event)
+    public function attributesToCarbon($event)
     {
         foreach ($this->attributes as $attribute) {
             $value = $this->owner->$attribute;
             if (!empty($value)) {
-
                 // If this value is an integer, we will assume it is a UNIX timestamp's value
                 // and format a Carbon object from this timestamp.
                 if (is_numeric($value)) {
@@ -100,11 +101,12 @@ class CarbonBehavior extends Behavior
     }
 
     /**
-     * Handles owner 'beforeInsert' event for converting attributes values to the previous format
+     * Handles owner 'beforeUpdate' event for converting attributes values to the default format
+     *
      * @param $event
      * @return bool
      */
-    public function beforeUpdate($event)
+    public function attributesToDefaultFormat($event)
     {
         $oldAttributes = $this->owner->oldAttributes;
         foreach ($this->attributes as $attribute) {
