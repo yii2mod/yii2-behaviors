@@ -38,7 +38,7 @@ Usage
                 'class' => PurifyBehavior::className(),
                 'attributes' => ['title', 'content'],
                 'config' => [
-                    'AutoFormat.Linkify' => 'true',
+                    'AutoFormat.Linkify' => true,
                     'HTML.TargetBlank' => true,
                     'HTML.Nofollow' => true
                 ]
