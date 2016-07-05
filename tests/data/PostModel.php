@@ -25,7 +25,9 @@ class PostModel extends ActiveRecord
      */
     public function rules()
     {
-        return [[['title', 'description'], 'required'],];
+        return [
+            [['title', 'description'], 'required']
+        ];
     }
 
     /**
