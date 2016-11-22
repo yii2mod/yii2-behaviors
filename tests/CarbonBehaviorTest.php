@@ -6,6 +6,7 @@ use yii2mod\behaviors\tests\data\PostModel;
 
 /**
  * Class CarbonBehaviorTest
+ *
  * @package yii2mod\behaviors\tests
  */
 class CarbonBehaviorTest extends TestCase

@@ -8,6 +8,7 @@ use yii2mod\behaviors\PurifyBehavior;
 
 /**
  * Class PostModel
+ *
  * @package yii2mod\settings\tests\data
  */
 class PostModel extends ActiveRecord
@@ -26,7 +27,7 @@ class PostModel extends ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'description'], 'required']
+            [['title', 'description'], 'required'],
         ];
     }
 
@@ -39,8 +40,8 @@ class PostModel extends ActiveRecord
             'carbon' => [
                 'class' => CarbonBehavior::className(),
                 'attributes' => [
-                    'createdAt'
-                ]
+                    'createdAt',
+                ],
             ],
             'purify' => [
                 'class' => PurifyBehavior::className(),
@@ -49,9 +50,9 @@ class PostModel extends ActiveRecord
                     'AutoFormat.Linkify' => true,
                     'HTML.TargetBlank' => true,
                     'HTML.Nofollow' => true,
-                    'HTML.TidyLevel' => 'heavy'
-                ]
-            ]
+                    'HTML.TidyLevel' => 'heavy',
+                ],
+            ],
         ];
     }
 }

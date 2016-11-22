@@ -2,13 +2,13 @@
 
 namespace yii2mod\behaviors;
 
-use Yii;
 use yii\base\Behavior;
 use yii\db\ActiveRecord;
 use yii\helpers\HtmlPurifier;
 
 /**
  * Class PurifyBehavior
+ *
  * @package yii2mod\behaviors
  */
 class PurifyBehavior extends Behavior
@@ -19,7 +19,7 @@ class PurifyBehavior extends Behavior
     public $attributes = [];
 
     /**
-     * @var null The config to use for HtmlPurifier.
+     * @var null The config to use for HtmlPurifier
      */
     public $config = null;
 
@@ -32,7 +32,6 @@ class PurifyBehavior extends Behavior
      * The callbacks will be attached to the [[owner]]'s events when the behavior is
      * attached to the owner; and they will be detached from the events when
      * the behavior is detached from the component.
-     *
      **/
     public function events()
     {

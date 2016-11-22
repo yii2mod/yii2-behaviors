@@ -41,6 +41,7 @@ use yii\db\ActiveRecord;
  * ```
  *
  * @link http://carbon.nesbot.com/docs/#api-introduction
+ *
  * @package yii2mod\behaviors
  */
 class CarbonBehavior extends Behavior
@@ -76,6 +77,7 @@ class CarbonBehavior extends Behavior
      * Convert the model's attributes to an Carbon instance.
      *
      * @param $event
+     *
      * @return static
      */
     public function attributesToCarbon($event)
@@ -104,6 +106,7 @@ class CarbonBehavior extends Behavior
      * Handles owner 'beforeUpdate' event for converting attributes values to the default format
      *
      * @param $event
+     *
      * @return bool
      */
     public function attributesToDefaultFormat($event)

@@ -6,6 +6,7 @@ use yii2mod\behaviors\tests\data\PostModel;
 
 /**
  * Class PurifyBehaviorTest
+ *
  * @package yii2mod\behaviors\tests
  */
 class PurifyBehaviorTest extends TestCase

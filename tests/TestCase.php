@@ -2,8 +2,8 @@
 
 namespace yii2mod\behaviors\tests;
 
-use yii\helpers\ArrayHelper;
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\helpers\FileHelper;
 
 /**
@@ -29,6 +29,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
     /**
      * Populates Yii::$app with a new application
      * The application will be destroyed on tearDown() automatically.
+     *
      * @param array $config The application configuration, if needed
      * @param string $appClass name of the application class to create
      */
@@ -42,7 +43,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
                 'db' => [
                     'class' => 'yii\db\Connection',
                     'dsn' => 'sqlite::memory:',
-                ]
+                ],
             ],
         ], $config));
     }
@@ -75,7 +76,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
             'id' => 'pk',
             'title' => 'string',
             'description' => 'string',
-            'createdAt' => 'integer'
+            'createdAt' => 'integer',
         ];
         $db->createCommand()->createTable($table, $columns)->execute();
 
