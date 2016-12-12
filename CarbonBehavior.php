@@ -40,7 +40,7 @@ use yii\db\ActiveRecord;
  *
  * ```
  *
- * @link http://carbon.nesbot.com/docs/#api-introduction
+ * @see http://carbon.nesbot.com/docs/#api-introduction
  *
  * @package yii2mod\behaviors
  */
