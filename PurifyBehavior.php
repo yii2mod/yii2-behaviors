@@ -6,11 +6,6 @@ use yii\base\Behavior;
 use yii\db\ActiveRecord;
 use yii\helpers\HtmlPurifier;
 
-/**
- * Class PurifyBehavior
- *
- * @package yii2mod\behaviors
- */
 class PurifyBehavior extends Behavior
 {
     /**
@@ -21,7 +16,7 @@ class PurifyBehavior extends Behavior
     /**
      * @var null The config to use for HtmlPurifier
      */
-    public $config = null;
+    public $config;
 
     /**
      * Declares event handlers for the [[owner]]'s events.
