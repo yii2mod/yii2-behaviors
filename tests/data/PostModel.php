@@ -38,13 +38,13 @@ class PostModel extends ActiveRecord
     {
         return [
             'carbon' => [
-                'class' => CarbonBehavior::className(),
+                'class' => CarbonBehavior::class,
                 'attributes' => [
                     'createdAt',
                 ],
             ],
             'purify' => [
-                'class' => PurifyBehavior::className(),
+                'class' => PurifyBehavior::class,
                 'attributes' => ['title'],
                 'config' => [
                     'AutoFormat.Linkify' => true,
